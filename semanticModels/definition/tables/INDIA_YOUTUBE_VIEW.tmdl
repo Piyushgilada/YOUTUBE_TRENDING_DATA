@@ -1,0 +1,97 @@
+table INDIA_YOUTUBE_VIEW
+	lineageTag: b40aa536-24d2-4787-8822-5c22d3cd92b7
+	sourceLineageTag: [dbo].[INDIA_YOUTUBE_VIEW]
+
+	column ID
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0ddd8c59-81cc-442c-a6b7-aeb708e83065
+		sourceLineageTag: ID
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column publishedAt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 94d48ef5-f767-45ca-812c-cd6e4c451e12
+		sourceLineageTag: publishedAt
+		summarizeBy: none
+		sourceColumn: publishedAt
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3d65c809-c970-4377-8e6b-f47dc9fdac03
+		sourceLineageTag: Title
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column commentCount
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 57476faa-8beb-48a3-a13e-2a02f1d95154
+		sourceLineageTag: commentCount
+		summarizeBy: sum
+		sourceColumn: commentCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column likeCount
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 21390f5a-cad8-4961-b3cf-85d9879346d8
+		sourceLineageTag: likeCount
+		summarizeBy: sum
+		sourceColumn: likeCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column viewCount
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 95b0139e-d933-473d-902a-37bc50388f55
+		sourceLineageTag: viewCount
+		summarizeBy: sum
+		sourceColumn: viewCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column channelTitle
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 397f3ce2-2c6e-4a00-9902-03825f624570
+		sourceLineageTag: channelTitle
+		summarizeBy: none
+		sourceColumn: channelTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country_code
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c951d3e3-a18a-4de9-a8b2-798c2b8715bf
+		sourceLineageTag: Country_code
+		summarizeBy: none
+		sourceColumn: Country_code
+
+		annotation SummarizationSetBy = Automatic
+
+	partition INDIA_YOUTUBE_VIEW = entity
+		mode: directLake
+		source
+			entityName: INDIA_YOUTUBE_VIEW
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

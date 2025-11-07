@@ -1,0 +1,97 @@
+table ALL_YOUTUBE
+	lineageTag: 69b11977-8e02-47df-947e-7c0ba1aa7e3c
+	sourceLineageTag: [dbo].[ALL_YOUTUBE]
+
+	column ID
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b33b544b-c858-41ac-8950-e8721be220f2
+		sourceLineageTag: ID
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column publishedAt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 7f4fb047-cf7f-4302-97e5-04daf6253c3c
+		sourceLineageTag: publishedAt
+		summarizeBy: none
+		sourceColumn: publishedAt
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c9181c74-8b6d-4799-8694-cf6c75554fea
+		sourceLineageTag: Title
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column commentCount
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 99e48256-652c-45e9-a694-bf3dfeed4388
+		sourceLineageTag: commentCount
+		summarizeBy: sum
+		sourceColumn: commentCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column likeCount
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 02143c12-f26d-4702-8d52-21f65383c446
+		sourceLineageTag: likeCount
+		summarizeBy: sum
+		sourceColumn: likeCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column viewCount
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: b5bc4fed-4dae-428b-8d07-94a6af3e26fe
+		sourceLineageTag: viewCount
+		summarizeBy: sum
+		sourceColumn: viewCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column channelTitle
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b2835c88-e217-41b9-a213-86de7323e526
+		sourceLineageTag: channelTitle
+		summarizeBy: none
+		sourceColumn: channelTitle
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country_code
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 96fedd42-eb61-4b52-905e-a905ed93f2eb
+		sourceLineageTag: Country_code
+		summarizeBy: none
+		sourceColumn: Country_code
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ALL_YOUTUBE = entity
+		mode: directLake
+		source
+			entityName: ALL_YOUTUBE
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+
