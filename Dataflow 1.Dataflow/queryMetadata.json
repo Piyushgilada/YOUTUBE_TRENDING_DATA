@@ -1,0 +1,89 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "Dataflow 1",
+  "queryGroups": [
+    {
+      "id": "0eb4c7dc-f029-44d3-a5e9-23e2efcd86f6",
+      "name": "ALL_YOUTUBE",
+      "description": ""
+    }
+  ],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "Query": {
+      "queryId": "3ad02465-27a0-442f-b609-1b86b9fc88a2",
+      "queryName": "Query",
+      "queryGroupId": "0eb4c7dc-f029-44d3-a5e9-23e2efcd86f6"
+    },
+    "Query (2)": {
+      "queryId": "c039f22f-fb56-4609-92c4-b3a2bbd8f4d1",
+      "queryName": "Query (2)",
+      "queryGroupId": "0eb4c7dc-f029-44d3-a5e9-23e2efcd86f6"
+    },
+    "Query (3)": {
+      "queryId": "5df982b8-ee4f-4674-8b60-ce0064d9d628",
+      "queryName": "Query (3)",
+      "queryGroupId": "0eb4c7dc-f029-44d3-a5e9-23e2efcd86f6"
+    },
+    "Query (4)": {
+      "queryId": "7b69c11d-2b36-4a8f-9026-60d3c4b2d6fb",
+      "queryName": "Query (4)",
+      "queryGroupId": "0eb4c7dc-f029-44d3-a5e9-23e2efcd86f6"
+    },
+    "Query (3)_DataDestination": {
+      "queryId": "03eea4df-3b90-4a3a-a104-75ca303c4db4",
+      "queryName": "Query (3)_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Query (4)_DataDestination": {
+      "queryId": "d7fe9b80-879d-4a7c-9041-6442148dc093",
+      "queryName": "Query (4)_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "NavigationQuery": {
+      "queryId": "85dda369-04d8-45c4-a042-092151a4bce3",
+      "queryName": "NavigationQuery",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Query_DataDestination": {
+      "queryId": "a1b970c8-6119-4e4a-8c1b-7660a3e3739d",
+      "queryName": "Query_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Query (2)_DataDestination": {
+      "queryId": "97faabac-7c8c-4284-a650-7d3e47635905",
+      "queryName": "Query (2)_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Append": {
+      "queryId": "fc8bb16e-8d2a-4905-ac1d-52b868cadca4",
+      "queryName": "Append",
+      "queryGroupId": "0eb4c7dc-f029-44d3-a5e9-23e2efcd86f6",
+      "loadEnabled": false
+    },
+    "Append_DataDestination": {
+      "queryId": "30e13867-d4b6-4c2a-aa4b-007f614b7440",
+      "queryName": "Append_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&chart=mostPopular&maxResults=50&regionCode=IN&key=AIzaSyCue0k5kmtY5hX96XUUlSNlUuXt1zER-aA",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"6c906874-ddb9-4fad-b087-1a7241a89cce\",\"DatasourceId\":\"bd9e6f6e-944a-4679-962e-9170ea538d5f\"}"
+    },
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"6c906874-ddb9-4fad-b087-1a7241a89cce\",\"DatasourceId\":\"af448fc6-6c9d-4beb-84f6-4a59a0f0cbc5\"}"
+    }
+  ]
+}
