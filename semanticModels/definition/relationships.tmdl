@@ -1,0 +1,16 @@
+relationship cdda8f8d-0766-1041-0fd9-c6363681bb6f
+	fromColumn: ALL_YOUTUBE.Country_code
+	toColumn: YOUTUBE_GERMANY.Country_code
+
+relationship 3b3de740-a174-562f-93d9-fa1f4ab459ab
+	fromColumn: ALL_YOUTUBE.Country_code
+	toColumn: YOUTUBE_INDIA.Country_code
+
+relationship 6df54b0d-9c76-03c8-c89d-7b7b88989538
+	fromColumn: ALL_YOUTUBE.Country_code
+	toColumn: YOUTUBE_UK.Country_code
+
+relationship 24403b55-e5d8-3b2a-9e5e-fb1f558441d0
+	fromColumn: ALL_YOUTUBE.Country_code
+	toColumn: YOUTUBE_USA.Country_code
+
